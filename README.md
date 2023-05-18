@@ -71,7 +71,7 @@ API地址为：`http://127.0.0.1:5000/send_prompt`
 import requests
 import json
 
-url = 'http://127.0.0.1:5000/send_prompt?a=1'
+url = 'http://127.0.0.1:5000/send_prompt'
 
 payload = {
     "message_receiver_url": "",

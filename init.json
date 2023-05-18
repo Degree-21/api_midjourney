@@ -1,9 +1,9 @@
 [
     {
-        "discord_user_token": "*.GwNqMb.rqwJWt-ALeGgpUmIuUyYCBMJsuJIULeC2BJXpI",
-        "discord_bot_token": "*.GvTX-J._T6TQKZWFk_KwayDJxflhuNB_4cvbgvJKtQF9Q",
-        "discord_server_id": "*",
-        "discord_channel_id": "*",
+        "discord_user_token": "OTEyNjA2MzM5NzUzMTgxMjU1.GwNqMb.rqwJWt-ALeGgpUmIuUyYCBMJsuJIULeC2BJXpI",
+        "discord_bot_token": "MTA5MjcxMjAyNDUzMTgxMjM2Mg.GvTX-J._T6TQKZWFk_KwayDJxflhuNB_4cvbgvJKtQF9Q",
+        "discord_server_id": "1092711724379029547",
+        "discord_channel_id": "1092732419825741856",
         "message_receiver_url": "",
         "use_status": "1",
         "listen_status": "1"

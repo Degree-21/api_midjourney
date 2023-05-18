@@ -81,13 +81,11 @@ class BotClient:
             if v["author"]["id"] != "936929561302675456":
                 continue
             prompt = define.get_message(v["content"])
-            print(v)
             task_info = db_query.get_task_by_prompt(prompt)
             if task_info is None:
                 continue
             if len(task_info["message_receiver_url"]) < 1:
                 print("task not call back prompt [{}] , text [{}]".format(prompt, v))
-                print(v)
                 continue
             response = requests.post(url=task_info["message_receiver_url"], json=v)
             print("on_message call back info [{}]".format(response.text))

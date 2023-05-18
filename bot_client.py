@@ -37,7 +37,7 @@ class BotClient:
     __use_status = False
 
     # __proxy = "http://127.0.0.1:7890"
-    __proxy = ""
+    __proxy = os.getenv("proxy")
 
     def __init__(self, client_info: dict):
         self.__discord_user_token = client_info["discord_user_token"]
@@ -56,6 +56,7 @@ class BotClient:
         return self.__use_status
 
     def run(self):
+        print(self.__proxy)
         intents = discord.Intents.all()
         client = discord.Client(intents=intents, proxy=self.__proxy)
         self.__discord_client = client

@@ -2,8 +2,12 @@ import multiprocessing as mp
 import bot_client
 from flask import Flask, request
 import db_query
+from dotenv import load_dotenv
+
 
 app = Flask(__name__)
+
+load_dotenv()
 
 # 全局变量
 bot_dict = {}

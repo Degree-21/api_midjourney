@@ -6,7 +6,7 @@
 - 你需要自己创建一个机器人，并且加入到上面的频道中，才可以使用后续的api
 - 代码由于快速开发，可能存在不稳定型，有问题请及时与我联系
 - 部分代码来自：https://github.com/George-iam/Midjourney_api
- 
+- 国内用户需要修改代理的话请修改 bot_client 中的 __proxy = ""  
 
 ## 修改init.json文件
 
@@ -41,7 +41,6 @@ python3 install -r requirements.txt
 python3 init_db.py  
 python3 app.py
 ```
-非常好的要求。以下是优化后的MD文档，请您仔细查阅。
 
 ## 使用API
 

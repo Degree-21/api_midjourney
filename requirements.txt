@@ -1,0 +1,5 @@
+certifi==2023.5.7
+discord.py==2.2.3
+Flask==2.3.2
+gevent==22.10.2
+Requests==2.30.0

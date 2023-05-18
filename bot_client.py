@@ -41,7 +41,6 @@ class BotClient:
 
     def __init__(self, client_info: dict):
         self.__discord_user_token = client_info["discord_user_token"]
-
         self.__discord_bot_token = client_info["discord_bot_token"]
         self.__discord_server_id = client_info["discord_server_id"]
         self.__discord_channel_id = client_info["discord_channel_id"]
@@ -75,19 +74,6 @@ class BotClient:
         async def on_ready():
             print('已登录为 {0.user}'.format(self.__discord_client))
             self.call_back_message()
-
-    # def worker(self, q):
-    #     while True:
-    #         try:
-    #             item = q.get_nowait()  # 获取队列数据
-    #             print(item)
-    #             # if method == 'my_method':
-    #             #     result = my_method(*args)  # 调用my_method方法
-    #             #     q.put(result)  # 再次将结果存回队列q
-    #         except Exception as e:
-    #             pass
-    #         gevent.sleep(0)
-    #         pass
 
     def call_back_message(self):
         chat_history = self.get_images()
@@ -130,12 +116,10 @@ class BotClient:
                        'options': [{'type': 3, 'name': 'prompt', 'value': str(prompt) + ' ' + self.__flags}],
                        'attachments': []}
                    }
-        print("send")
         r = requests.post('https://discord.com/api/v9/interactions', json=payload, headers=header, proxies={
             'http': self.__proxy,
             'https': self.__proxy,
         })
-        print("send")
         if r.status_code != 204:
             raise Exception('prompt [{}] send fail , response [{}]'.format(prompt, r.text))
         # while r.status_code != 204:
